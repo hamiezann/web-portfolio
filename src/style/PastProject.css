@@ -9,7 +9,6 @@
 .section-title {
   font-size: 2rem;
   margin-bottom: 20px;
-  /* color: #007bff; */
 }
 
 /* Carousel Styling */
@@ -17,9 +16,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(135deg, #f0f9ff, #d6e6f2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 15px; */
   overflow: hidden;
   position: relative;
   padding: 20px;
@@ -82,8 +78,9 @@
 
 .stack-images {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap; /* Allow icons to wrap in smaller screens */
+  justify-content: center; /* Center icons */
+  gap: 20px;
 }
 
 .stack-image {
@@ -190,65 +187,90 @@
 .stack-item div {
   font-weight: bold;
 }
+
 /* For smaller screens, adjust the icon size */
 @media (max-width: 768px) {
   .stack-icon {
     font-size: 2rem;  /* Smaller size for tablets and small screens */
   }
-}
 
-@media (max-width: 480px) {
-  .stack-icon {
-    font-size: 1.5rem;  /* Even smaller size for mobile screens */
+  .stack-images {
+    flex-direction: column;  /* Stack icons vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stack-image {
+    width: 80px;  /* Smaller size for icons */
+    height: 80px;
   }
 }
 
- /* General button styles */
- .section-1-button1,
- .section-1-button2 {
-     padding: 12px 24px;
-     font-size: 1.1rem;
-     border: none;
-     border-radius: 8px;
-     cursor: pointer;
-     font-weight: bold;
-     transition: all 0.3s ease;
-     display: inline-block;
-     text-align: center;
-     text-decoration: none;
-     margin-top: 20px;
- }
- 
- /* Primary button - My Resume */
- .section-1-button1 {
-     background-color: #FFA500; /* Orange */
-     color: white;
- }
- 
- /* Secondary button - Hire Me */
- .section-1-button2 {
-     background-color: white;
-     color: #FFA500; /* Orange */
-     border: 2px solid #FFA500; /* Orange border */
- }
- 
- /* Hover effects */
- .section-1-button1:hover {
-     background-color: white; /* Darker orange */
-     color: #FFA500;
-     transform: translateY(-3px); /* Slight hover lift effect */
- }
- 
- .section-1-button2:hover {
-     background-color: #FFA500; /* Orange */
-     color: white;
-     transform: translateY(-3px); /* Slight hover lift effect */
- }
- 
- /* Focus styles for accessibility */
- .section-1-button1:focus,
- .section-1-button2:focus {
-     outline: none;
-     box-shadow: 0 0 0 2px #FFA500; /* Focus indicator */
- }
- 
+@media (max-width: 430px) {
+  .stack-icon {
+    font-size: 1.5rem;  /* Even smaller size for mobile screens */
+  }
+
+  .stack-images {
+    gap: 8px;  /* Reduce space between icons */
+  }
+}
+
+@media (max-width: 380px) {
+  .stack-icon {
+    font-size: 1rem;  /* Even smaller size for mobile screens */
+  }
+
+  .stack-images {
+    gap: 6px;  /* Even smaller gap between icons */
+  }
+}
+
+/* General button styles */
+.section-1-button1,
+.section-1-button2 {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* Primary button - My Resume */
+.section-1-button1 {
+  background-color: #FFA500; /* Orange */
+  color: white;
+}
+
+/* Secondary button - Hire Me */
+.section-1-button2 {
+  background-color: white;
+  color: #FFA500; /* Orange */
+  border: 2px solid #FFA500; /* Orange border */
+}
+
+/* Hover effects */
+.section-1-button1:hover {
+  background-color: white; /* Darker orange */
+  color: #FFA500;
+  transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+.section-1-button2:hover {
+  background-color: #FFA500; /* Orange */
+  color: white;
+  transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+/* Focus styles for accessibility */
+.section-1-button1:focus,
+.section-1-button2:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #FFA500; /* Focus indicator */
+}

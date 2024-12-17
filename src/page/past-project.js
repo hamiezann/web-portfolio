@@ -29,7 +29,7 @@ const stackIcons = {
   },
   map: {
     icon: faMapMarked,
-    name: "Google Map API",
+    name: "Map API",
     color: "#4CAF50", // Green color for Google Map API
   },
   paypal: {
