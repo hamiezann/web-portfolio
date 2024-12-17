@@ -1,0 +1,254 @@
+/* General Layout */
+.past-project-container {
+  text-align: center;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  /* color: #007bff; */
+}
+
+/* Carousel Styling */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #f0f9ff, #d6e6f2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px; */
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #007bff;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #0056b3;
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  gap: 20px;
+}
+
+.project-details {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.youtube-button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.youtube-button:hover {
+  background: #cc0000;
+}
+
+.stack-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stack-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.stack-image:hover {
+  transform: scale(1.1);
+}
+
+/* Lightbox Styling */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  color: white;
+  text-align: center;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.lightbox-description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  font-size: 2.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+}
+
+.lightbox-nav.prev {
+  left: 20px;
+}
+
+.lightbox-nav.next {
+  right: 20px;
+}
+
+.project-features {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.stack-item {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+.stack-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stack-icon {
+  font-size: 3rem;  /* Default size for larger screens */
+  transition: font-size 0.3s ease;  /* Smooth transition when resizing */
+}
+
+.stack-item div {
+  font-weight: bold;
+}
+/* For smaller screens, adjust the icon size */
+@media (max-width: 768px) {
+  .stack-icon {
+    font-size: 2rem;  /* Smaller size for tablets and small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .stack-icon {
+    font-size: 1.5rem;  /* Even smaller size for mobile screens */
+  }
+}
+
+ /* General button styles */
+ .section-1-button1,
+ .section-1-button2 {
+     padding: 12px 24px;
+     font-size: 1.1rem;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: all 0.3s ease;
+     display: inline-block;
+     text-align: center;
+     text-decoration: none;
+     margin-top: 20px;
+ }
+ 
+ /* Primary button - My Resume */
+ .section-1-button1 {
+     background-color: #FFA500; /* Orange */
+     color: white;
+ }
+ 
+ /* Secondary button - Hire Me */
+ .section-1-button2 {
+     background-color: white;
+     color: #FFA500; /* Orange */
+     border: 2px solid #FFA500; /* Orange border */
+ }
+ 
+ /* Hover effects */
+ .section-1-button1:hover {
+     background-color: white; /* Darker orange */
+     color: #FFA500;
+     transform: translateY(-3px); /* Slight hover lift effect */
+ }
+ 
+ .section-1-button2:hover {
+     background-color: #FFA500; /* Orange */
+     color: white;
+     transform: translateY(-3px); /* Slight hover lift effect */
+ }
+ 
+ /* Focus styles for accessibility */
+ .section-1-button1:focus,
+ .section-1-button2:focus {
+     outline: none;
+     box-shadow: 0 0 0 2px #FFA500; /* Focus indicator */
+ }
+ 

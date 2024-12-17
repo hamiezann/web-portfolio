@@ -1,0 +1,207 @@
+/* General container styles */
+.skillset-container {
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(135deg, #87CEFA, #FFE5B4);  */
+  background: #f7f5f2 ;
+  color: #333; /* Text color for readability */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+  
+  .title {
+
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  /* Icon container for skill icons */
+.icon-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+    
+  }
+  
+  .skill-jar {
+    position: relative;
+    width: 12vw;
+    max-width: 100px;
+    min-width: 60px;
+    height: 18vw;
+    max-height: 150px;
+    min-height: 100px;
+    background: #eeeeee; /* A solid, light gray background */
+    
+    flex: 1 1 calc(16.66% - 20px);
+    max-width: calc(16.66% - 20px);
+    box-sizing: border-box; 
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 -2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    display: flex;
+    flex-direction: column-reverse;
+    border: 2px solid #bdbdbd; 
+    transition: transform 0.2s ease, background 0.3s ease; 
+    cursor: pointer;
+  }
+  
+  .skill-jar:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: #f2f2f2; 
+    border-color: black;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), inset 0 -2px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+  }
+  
+  .skill-jar:active {
+    transform: scale(0.95); /* Slight compression effect on click */
+    background: #dcdcdc; /* Slightly darker background on click */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  
+  /* Grid layout for skill jars */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+  }
+  
+  
+  /* Ripple effect container */
+  .skill-jar::after {
+    content: "";
+    border-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    pointer-events: none;
+  }
+  
+  /* Water level inside the jar */
+  .water {
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: height 0.3s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  
+
+  .skill-jar:hover .water,
+  .skill-jar:active .water {
+    background-color: rgba(s255, 255, 255, 0.5);
+    border-color: black;
+    
+  }
+
+  .skill-jar:hover .jar-label,
+.skill-jar:active .jar-label {
+  opacity: 1; /* Fully visible */
+  /* transform: scale(1);  */
+  border-color: black;
+  transform: translateX(-50%) scale(1);
+  
+}
+  
+  .skill-jar:active::after {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    border-color: black;
+   
+  }
+  
+  /* Reflection effect for cylinder */
+  .skill-jar::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 30%;
+    background: radial-gradient(
+      circle at top center,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.2)
+    );
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  
+  /* Label below each jar */
+  .jar-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    position: absolute; /* Make it position relative to the jar */
+    bottom: 10px; /* Align it towards the bottom of the jar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%) scale(0.9); /* Center horizontally and scale it down */
+    opacity: 0; /* Initially hidden */
+    text-align: center; /* Center the text */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 1024px) {
+    .skill-jar {
+      flex: 1 1 calc(25% - 20px); /* Show 4 jars per row on medium screens */
+      max-width: calc(25% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 20px;
+    }
+  
+    .skill-jar {
+      width: 15vw;
+      height: 20vw;
+
+      flex: 1 1 calc(33.33% - 20px); /* Adjust to show up to 3 jars per row on smaller screens */
+      max-width: calc(33.33% - 20px);
+    }
+  
+    .jar-label {
+      font-size: 12px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 18px;
+    }
+  
+    .skill-jar {
+      width: 18vw;
+      height: 25vw;
+
+      flex: 1 1 calc(50% - 20px); /* Adjust to show up to 2 jars per row on very small screens */
+      max-width: calc(50% - 20px);
+    }
+  
+    .jar-label {
+      font-size: 10px;
+    }
+  }
+  

@@ -1,0 +1,174 @@
+/* General styling */
+.section-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(135deg, #003366, #FF6347);  */
+  background: linear-gradient(135deg,#f7f5f2, #87CEFA );
+  color: black; /* White text for better contrast */
+  /* background: linear-gradient(to bottom right, #87CEFA, white, #FFC0CB); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Adds a bolder shadow */
+}
+
+  
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  /* Image styling */
+  .hero-figure {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text styling */
+  .section-1-text-wrapper {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .hero-text-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text-wrapper h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text-wrapper p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  .button-wrapper {
+    display: flex;
+    gap: 15px;
+  }
+  
+ /* General button styles */
+.section-1-button1,
+.section-1-button2 {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Primary button - My Resume */
+.section-1-button1 {
+    background-color: #FFA500; /* Orange */
+    color: white;
+}
+
+/* Secondary button - Hire Me */
+.section-1-button2 {
+    background-color: white;
+    color: #FFA500; /* Orange */
+    border: 2px solid #FFA500; /* Orange border */
+}
+
+/* Hover effects */
+.section-1-button1:hover {
+    background-color: white; /* Darker orange */
+    color: #FFA500;
+    transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+.section-1-button2:hover {
+    background-color: #FFA500; /* Orange */
+    color: white;
+    transform: translateY(-3px); /* Slight hover lift effect */
+}
+
+/* Focus styles for accessibility */
+.section-1-button1:focus,
+.section-1-button2:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFA500; /* Focus indicator */
+}
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column; /* Stack image and text vertically */
+      text-align: center;
+    }
+  
+    .section-1-text-wrapper {
+      text-align: center;
+    }
+  
+    .main-img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .hero-text-wrapper h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-text-wrapper h3 {
+      font-size: 1.2rem;
+    }
+  
+    .hero-text-wrapper p {
+      font-size: 0.9rem;
+    }
+  
+    .button-wrapper {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .hero-text-wrapper h2 {
+      font-size: 1.2rem;
+    }
+  
+    .hero-text-wrapper h3 {
+      font-size: 1rem;
+    }
+  
+    .hero-text-wrapper p {
+      font-size: 0.8rem;
+    }
+  
+    .section-1-button1,
+    .section-1-button2 {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useState, useEffect } from 'react';
+import Header from './page/header';
+import Footer from './page/footer';
+import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import SectionOne from './page/section1';
+import SectionTwo from './page/section2';
+import AboutMe from './page/aboutMe';
+import SkillSet from './page/SkillSet';
+import PastProject from './page/past-project';
+import ContactMe from './page/contactMe';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     
+      <main>
+
+        <SectionOne />
+        <AboutMe />
+        <SkillSet />
+        <PastProject />
+        <ContactMe />
+      </main>
+      {/* <Footer /> */}
+      
     </div>
   );
 }
